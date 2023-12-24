@@ -3,38 +3,39 @@
 namespace WebApiDemo.Controllers
 {
     [ApiController]
+    [Route("api/[controller]")] // Now We Dont need to mention in each methodx
     public class ShirtsController : ControllerBase
     {
         [HttpGet]
-        [Route("/shirts")]
+        //[Route("/shirts")]
         public string GetShirts() 
         {
             return "Reading all the shirts";
         }
 
-        [HttpGet]
-        [Route("/shirts/{id}")]
+        [HttpGet("{id}")]
+        //[Route("/shirts/{id}")]
         public string GetShirtById(int id)
         {
             return $"Reading Shirt :{id}";
         }
 
         [HttpPost]
-        [Route("/shirts")]
+        //[Route("/shirts")]
         public string CreateShirt()
         {
             return "creatig a Shirt";
         }
 
-        [HttpPut]
-        [Route("/shirts/{id}")]
+        [HttpPut("{id}")]
+        //[Route("/shirts/{id}")]
         public string UpdateShirt(int id) 
         {
             return $"Updating Shirt :{id}";
         }
 
-        [HttpDelete]
-        [Route("/shirts/{id}")]
+        [HttpDelete("{id}")]
+        //[Route("/shirts/{id}")]
         public string DeleteShirt(int id) 
         {
             return $"Deleting Shirt :{id}";
