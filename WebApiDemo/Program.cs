@@ -2,16 +2,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
 
-//Routing For Web API
+app.MapControllers();
+
+//This is Minimal Routing For Web API
 // "/shirts"
+
 //Read All Shirt
-app.MapGet("/shirts",()=>
+/*app.MapGet("/shirts",()=>
 {
     return "Reading all the shirts";
 });
@@ -36,6 +41,7 @@ app.MapPut("/shirts/{id}", (int id) => {
 //Delete the shirt
 app.MapDelete("/shirts/{id}", (int id) => {
     return $"Deleting Shirt with Id : {id}";
-});
+});*/
+
 
 app.Run();
