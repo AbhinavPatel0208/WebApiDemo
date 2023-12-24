@@ -23,8 +23,8 @@ namespace WebApiDemo.Controllers
 
         [HttpPost]
         //[Route("/shirts")]
-        //public string CreateShirt([FromBody]Shirt shirt) //JSon
-        public string CreateShirt([FromForm] Shirt shirt) //Body Key-value
+        public string CreateShirt([FromBody]Shirt shirt) //JSon
+        //public string CreateShirt([FromForm] Shirt shirt) //Body Key-value
         {
             return "creatig a Shirt";
         }
