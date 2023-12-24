@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApiDemo.Models;
 
 namespace WebApiDemo.Controllers
 {
@@ -22,7 +23,8 @@ namespace WebApiDemo.Controllers
 
         [HttpPost]
         //[Route("/shirts")]
-        public string CreateShirt()
+        //public string CreateShirt([FromBody]Shirt shirt) //JSon
+        public string CreateShirt([FromForm] Shirt shirt) //Body Key-value
         {
             return "creatig a Shirt";
         }
