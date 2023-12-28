@@ -3,8 +3,9 @@ using WebApiDemo.Models;
 
 namespace WebApiDemo.Controllers
 {
+    //API
     [ApiController]
-    [Route("api/[controller]")] // Now We Dont need to mention in each methodx
+    [Route("api/[controller]")] 
     public class ShirtsController : ControllerBase
     {
 
@@ -16,10 +17,9 @@ namespace WebApiDemo.Controllers
             new Shirt{ShirtId = 4 , Brand="PinkVilla", Color="Purple", Gender="Women" , Price= 906 , Size=9},
 
         };
-
         [HttpGet]
         //[Route("/shirts")]
-        public IActionResult GetShirts() 
+        public IActionResult GetShirts()
         {
             return Ok("Reading all the shirts");
         }
@@ -39,7 +39,7 @@ namespace WebApiDemo.Controllers
 
         [HttpPost]
         //[Route("/shirts")]
-        public IActionResult CreateShirt([FromBody]Shirt shirt) //JSon
+        public IActionResult CreateShirt([FromBody] Shirt shirt) //JSon
         //public IActionResult CreateShirt([FromForm] Shirt shirt) //Body Key-value
         {
             return Ok("creatig a Shirt");
@@ -47,16 +47,32 @@ namespace WebApiDemo.Controllers
 
         [HttpPut("{id}")]
         //[Route("/shirts/{id}")]
-        public IActionResult UpdateShirt(int id) 
+        public IActionResult UpdateShirt(int id)
         {
             return Ok($"Updating Shirt :{id}");
         }
 
         [HttpDelete("{id}")]
         //[Route("/shirts/{id}")]
-        public IActionResult DeleteShirt(int id) 
+        public IActionResult DeleteShirt(int id)
         {
             return Ok($"Deleting Shirt :{id}");
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
