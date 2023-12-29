@@ -3,7 +3,7 @@ using WebApiDemo.Models;
 
 namespace WebApiDemo.Controllers
 {
-    //API
+    //[API]
     [ApiController]
     [Route("api/[controller]")] 
     public class ShirtsController : ControllerBase
